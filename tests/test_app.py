@@ -24,6 +24,10 @@ async def create_app(site, tier, name, port=None, connect_to=[]):
 
     return "http://localhost:%d/" % port, application
 
+@pytest.mark.asyncio
+async def test_one_node():
+    assert 5 == 0
+    await x.stop()
 
 @pytest.mark.asyncio
 async def test_one_node():
